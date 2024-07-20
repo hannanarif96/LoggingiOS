@@ -1,5 +1,3 @@
-import Foundation
-
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -16,5 +14,10 @@ class LoginViewController: UIViewController {
         let password = "pass"
         let success = viewModel.login(username: username, password: password)
         // Handle login result...
+        if success {
+            print("Login Successful")
+        } else {
+            print("Login Failed")
+        }
     }
 }

@@ -1,8 +1,17 @@
 import Foundation
 
 class AuthService {
+    private var users: [String: String] = ["user": "pass"]
+
     func login(username: String, password: String) -> Bool {
-        // Simulate login logic...
-        return username == "user" && password == "pass"
+        return users[username] == password
+    }
+
+    func signup(username: String, password: String) -> Bool {
+        guard users[username] == nil else {
+            return false
+        }
+        users[username] = password
+        return true
     }
 }

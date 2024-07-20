@@ -1,5 +1,5 @@
 import XCTest
-@testable import LoggingiOS
+@testable import TaskManager
 
 class AuthViewModelTests: XCTestCase {
     var viewModel: AuthViewModel!
@@ -16,6 +16,17 @@ class AuthViewModelTests: XCTestCase {
 
     func testLoginFailure() {
         let result = viewModel.login(username: "user", password: "wrongpass")
+        XCTAssertFalse(result)
+    }
+
+    func testSignupSuccess() {
+        let result = viewModel.signup(username: "newuser", password: "newpass")
+        XCTAssertTrue(result)
+    }
+
+    func testSignupFailure() {
+        viewModel.signup(username: "user", password: "pass") // Existing user
+        let result = viewModel.signup(username: "user", password: "pass")
         XCTAssertFalse(result)
     }
 }
