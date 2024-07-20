@@ -1,8 +1,8 @@
-//
-//  AuthService.swift
-//  LoggingiOS
-//
-//  Created by Hannan on 21/7/24.
-//
-
 import Foundation
+
+class AuthService {
+    func login(username: String, password: String) -> Bool {
+        // Simulate login logic...
+        return username == "user" && password == "pass"
+    }
+}

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AFA3636B2C3AF60F0086349A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3636A2C3AF60F0086349A /* AppDelegate.swift */; };
-		AFA3636D2C3AF60F0086349A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3636C2C3AF60F0086349A /* SceneDelegate.swift */; };
 		AFA3636F2C3AF60F0086349A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3636E2C3AF60F0086349A /* ViewController.swift */; };
 		AFA363722C3AF60F0086349A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AFA363712C3AF60F0086349A /* Base */; };
 		AFA363742C3AF6110086349A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA363732C3AF6110086349A /* Assets.xcassets */; };
@@ -16,6 +15,12 @@
 		AFA363822C3AF6120086349A /* LoggingiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA363812C3AF6120086349A /* LoggingiOSTests.swift */; };
 		AFA3638C2C3AF6120086349A /* LoggingiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3638B2C3AF6120086349A /* LoggingiOSUITests.swift */; };
 		AFA3638E2C3AF6120086349A /* LoggingiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3638D2C3AF6120086349A /* LoggingiOSUITestsLaunchTests.swift */; };
+		AFA3639B2C3AF6250086349A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3639A2C3AF6250086349A /* Logger.swift */; };
+		AFA3639D2C3B4A270086349A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3639C2C3B4A270086349A /* MainViewModel.swift */; };
+		AFE241782C4C5B53009EDE9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE241772C4C5B53009EDE9A /* LoginViewController.swift */; };
+		AFE2417A2C4C5CE2009EDE9A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE241792C4C5CE2009EDE9A /* AuthViewModel.swift */; };
+		AFE2417C2C4C5CFF009EDE9A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE2417B2C4C5CFF009EDE9A /* AuthService.swift */; };
+		AFE2417E2C4C5D34009EDE9A /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE2417D2C4C5D34009EDE9A /* AuthViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,6 @@
 /* Begin PBXFileReference section */
 		AFA363672C3AF60F0086349A /* LoggingiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoggingiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA3636A2C3AF60F0086349A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFA3636C2C3AF60F0086349A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AFA3636E2C3AF60F0086349A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AFA363712C3AF60F0086349A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFA363732C3AF6110086349A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		AFA363872C3AF6120086349A /* LoggingiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggingiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA3638B2C3AF6120086349A /* LoggingiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingiOSUITests.swift; sourceTree = "<group>"; };
 		AFA3638D2C3AF6120086349A /* LoggingiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AFA3639A2C3AF6250086349A /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		AFA3639C2C3B4A270086349A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		AFE241772C4C5B53009EDE9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AFE241792C4C5CE2009EDE9A /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		AFE2417B2C4C5CFF009EDE9A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		AFE2417D2C4C5D34009EDE9A /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +109,15 @@
 		AFA363692C3AF60F0086349A /* LoggingiOS */ = {
 			isa = PBXGroup;
 			children = (
+				AFE241762C4C5B07009EDE9A /* Auth */,
 				AFA3636A2C3AF60F0086349A /* AppDelegate.swift */,
-				AFA3636C2C3AF60F0086349A /* SceneDelegate.swift */,
 				AFA3636E2C3AF60F0086349A /* ViewController.swift */,
 				AFA363702C3AF60F0086349A /* Main.storyboard */,
 				AFA363732C3AF6110086349A /* Assets.xcassets */,
 				AFA363752C3AF6110086349A /* LaunchScreen.storyboard */,
 				AFA363782C3AF6110086349A /* Info.plist */,
+				AFA3639A2C3AF6250086349A /* Logger.swift */,
+				AFA3639C2C3B4A270086349A /* MainViewModel.swift */,
 			);
 			path = LoggingiOS;
 			sourceTree = "<group>";
@@ -114,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA363812C3AF6120086349A /* LoggingiOSTests.swift */,
+				AFE2417D2C4C5D34009EDE9A /* AuthViewModelTests.swift */,
 			);
 			path = LoggingiOSTests;
 			sourceTree = "<group>";
@@ -125,6 +138,16 @@
 				AFA3638D2C3AF6120086349A /* LoggingiOSUITestsLaunchTests.swift */,
 			);
 			path = LoggingiOSUITests;
+			sourceTree = "<group>";
+		};
+		AFE241762C4C5B07009EDE9A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AFE241772C4C5B53009EDE9A /* LoginViewController.swift */,
+				AFE241792C4C5CE2009EDE9A /* AuthViewModel.swift */,
+				AFE2417B2C4C5CFF009EDE9A /* AuthService.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA3639D2C3B4A270086349A /* MainViewModel.swift in Sources */,
 				AFA3636F2C3AF60F0086349A /* ViewController.swift in Sources */,
+				AFE2417A2C4C5CE2009EDE9A /* AuthViewModel.swift in Sources */,
 				AFA3636B2C3AF60F0086349A /* AppDelegate.swift in Sources */,
-				AFA3636D2C3AF60F0086349A /* SceneDelegate.swift in Sources */,
+				AFE241782C4C5B53009EDE9A /* LoginViewController.swift in Sources */,
+				AFA3639B2C3AF6250086349A /* Logger.swift in Sources */,
+				AFE2417C2C4C5CFF009EDE9A /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE2417E2C4C5D34009EDE9A /* AuthViewModelTests.swift in Sources */,
 				AFA363822C3AF6120086349A /* LoggingiOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

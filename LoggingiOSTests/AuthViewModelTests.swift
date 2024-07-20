@@ -1,8 +1,21 @@
-//
-//  AuthViewModelTests.swift
-//  LoggingiOSTests
-//
-//  Created by Hannan on 21/7/24.
-//
+import XCTest
+@testable import LoggingiOS
 
-import Foundation
+class AuthViewModelTests: XCTestCase {
+    var viewModel: AuthViewModel!
+
+    override func setUp() {
+        super.setUp()
+        viewModel = AuthViewModel()
+    }
+
+    func testLoginSuccess() {
+        let result = viewModel.login(username: "user", password: "pass")
+        XCTAssertTrue(result)
+    }
+
+    func testLoginFailure() {
+        let result = viewModel.login(username: "user", password: "wrongpass")
+        XCTAssertFalse(result)
+    }
+}

@@ -1,8 +1,20 @@
-//
-//  LoginViewController.swift
-//  LoggingiOS
-//
-//  Created by Hannan on 21/7/24.
-//
-
 import Foundation
+
+import UIKit
+
+class LoginViewController: UIViewController {
+    var viewModel: AuthViewModel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        viewModel = AuthViewModel()
+    }
+
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        let username = "user"
+        let password = "pass"
+        let success = viewModel.login(username: username, password: password)
+        // Handle login result...
+    }
+}

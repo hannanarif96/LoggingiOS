@@ -8,10 +8,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var openFlutterCallback: (() -> Void)?
+
+        @IBAction func openFlutterModule(_ sender: Any) {
+            openFlutterCallback?()
+        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let logger = Logger()
+        let viewModel = MainViewModel(logger: logger)
+        viewModel.logData(className: NSStringFromClass(classForCoder))
     }
 
 
