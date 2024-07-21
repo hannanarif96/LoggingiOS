@@ -1,5 +1,5 @@
 import XCTest
-@testable import TaskManager
+@testable import LoggingiOS
 
 class AuthViewModelTests: XCTestCase {
     var viewModel: AuthViewModel!

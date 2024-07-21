@@ -1,50 +1,117 @@
 import XCTest
 @testable import LoggingiOS
 
-final class LoggingiOSTests: XCTestCase {
-
-    var mockLogger: Logger!
-    var viewModel: MainViewModel!
-
-    override func setUpWithError() throws {
-        mockLogger = Logger()
-        viewModel = MainViewModel(logger: mockLogger)
-    }
-
-    override func tearDownWithError() throws {
-        mockLogger = nil
-        viewModel = nil
+class LoggerTests: XCTestCase {
+    private var logger: Logger!
+    private let logFilePath = "test.log"
+    
+    override func setUp() {
+        super.setUp()
+        // Clean up the log file before each test
+        try? FileManager.default.removeItem(atPath: logFilePath)
+        logger = Logger(logToFile: true, logFilePath: logFilePath)
     }
     
-    func testLogDebug() {
-        let result = mockLogger.logDebug(message: "This is a debug message")
-        XCTAssertEqual("Debug Log: This is a debug message", result)
+    func testLogDebug_withDebugLevel() {
+        logger.setLogLevel(.debug)
+        let message = "Debug message"
+        let log = logger.logDebug(message)
+        XCTAssertTrue(log.contains("[DEBUG] \(message)"))
     }
     
-    func testLogInfo() {
-        let result = mockLogger.logInfo(message: "This is an info message")
-        XCTAssertEqual("Info Log: This is an info message", result)
+    func testLogInfo_withDebugLevel() {
+        logger.setLogLevel(.debug)
+        let message = "Info message"
+        let log = logger.logInfo(message)
+        XCTAssertTrue(log.contains("[INFO] \(message)"))
     }
     
-    func testLogWarn() {
-        let result = mockLogger.logWarn(message: "This is a warn message")
-        XCTAssertEqual("Warn Log: This is a warn message", result)
+    func testLogWarn_withDebugLevel() {
+        logger.setLogLevel(.debug)
+        let message = "Warn message"
+        let log = logger.logWarn(message)
+        XCTAssertTrue(log.contains("[WARN] \(message)"))
     }
     
-    func testLogError() {
-        let result = mockLogger.logError(message: "This is an error message")
-        XCTAssertEqual("Error Log: This is an error message", result)
+    func testLogError_withDebugLevel() {
+        logger.setLogLevel(.debug)
+        let message = "Error message"
+        let log = logger.logError(message)
+        XCTAssertTrue(log.contains("[ERROR] \(message)"))
     }
     
-    func testLogData() {
-        let className = "TestClassName"
-        viewModel.logData(className: className)
-        
-        XCTAssertEqual("Debug Log: \(className)", viewModel.logsList[0])
-        XCTAssertEqual("Info Log: \(className)", viewModel.logsList[1])
-        XCTAssertEqual("Warn Log: \(className)", viewModel.logsList[2])
-        XCTAssertEqual("Error Log: \(className)", viewModel.logsList[3])
-        
-        viewModel.logsList.removeAll()
+    func testLogDebug_withInfoLevel() {
+        logger.setLogLevel(.info)
+        let message = "Debug message"
+        let log = logger.logDebug(message)
+        XCTAssertEqual("", log)
+    }
+    
+    func testLogInfo_withInfoLevel() {
+        logger.setLogLevel(.info)
+        let message = "Info message"
+        let log = logger.logInfo(message)
+        XCTAssertTrue(log.contains("[INFO] \(message)"))
+    }
+    
+    func testLogWarn_withInfoLevel() {
+        logger.setLogLevel(.info)
+        let message = "Warn message"
+        let log = logger.logWarn(message)
+        XCTAssertTrue(log.contains("[WARN] \(message)"))
+    }
+    
+    func testLogError_withInfoLevel() {
+        logger.setLogLevel(.info)
+        let message = "Error message"
+        let log = logger.logError(message)
+        XCTAssertTrue(log.contains("[ERROR] \(message)"))
+    }
+    
+    func testLogDebug_withWarnLevel() {
+        logger.setLogLevel(.warn)
+        let message = "Debug message"
+        let log = logger.logDebug(message)
+        XCTAssertEqual("", log)
+    }
+    
+    func testLogInfo_withWarnLevel() {
+        logger.setLogLevel(.warn)
+        let message = "Info message"
+        let log = logger.logInfo(message)
+        XCTAssertEqual("", log)
+    }
+    
+    func testLogWarn_withWarnLevel() {
+        logger.setLogLevel(.warn)
+        let message = "Warn message"
+        let log = logger.logWarn(message)
+        XCTAssertTrue(log.contains("[WARN] \(message)"))
+    }
+    
+    func testLogError_withWarnLevel() {
+        logger.setLogLevel(.warn)
+        let message = "Error message"
+        let log = logger.logError(message)
+        XCTAssertTrue(log.contains("[ERROR] \(message)"))
+    }
+    
+    func testLogDebug_withErrorLevel() {
+        logger.setLogLevel(.error)
+        let message = "Debug message"
+        let log = logger.logDebug(message)
+        XCTAssertEqual("", log)
+    }
+    
+    func testLogInfo_withErrorLevel() {
+        logger.setLogLevel(.error)
+        let message = "Info message"
+        let log = logger.logInfo(message)
+        XCTAssertEqual("", log)
+    }
+    
+    func testLogWarn_withErrorLevel() {
+        logger.setLogLevel(.error)
+        let message = "Warn"
     }
 }

@@ -1,5 +1,5 @@
 import XCTest
-@testable import TaskManager
+@testable import LoggingiOS
 
 class ProfileViewModelTests: XCTestCase {
     var viewModel: ProfileViewModel!

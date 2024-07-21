@@ -10,9 +10,9 @@ class MainViewModel {
     }
     
     func logData(className: String) {
-        logsList.append(logger.logDebug(message: className))
-        logsList.append(logger.logInfo(message: className))
-        logsList.append(logger.logWarn(message: className))
-        logsList.append(logger.logError(message: className))
+        logsList.append(logger.logDebug(className))
+        logsList.append(logger.logInfo(className))
+        logsList.append(logger.logWarn(className))
+        logsList.append(logger.logError(className))
     }
 }
